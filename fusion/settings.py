@@ -132,3 +132,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email teste console
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Email Produção
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'dc529f79e02907'
+EMAIL_HOST_PASSWORD = 'f9661a3d71865d'
+EMAIL_PORT = '2525'
