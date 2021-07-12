@@ -70,3 +70,31 @@ class Funcionario(Base):
 
     def __str__(self):
         return self.nome
+
+
+class Features(Base):
+    ICONES_OPTIONS = (
+        ('lni-rocket', 'Foguete'),
+        ('lni-laptop-phone', 'Laptop'),
+        ('lni-cog', 'Engrenagem'),
+        ('lni-leaf', 'Folha'),
+        ('lni-layers', 'Camadas'),
+        ('lni-mobile', 'Mobile'),
+    )
+
+    SIDE_ELEMENT = (
+        ('Left', 'Left'),
+        ('Right', 'Right'),
+    )
+
+    titulo = models.CharField('Titulo', max_length=100)
+    descricao = models.TextField('Descrição', max_length=200)
+    icone = models.CharField('Ícone', max_length=17, choices=ICONES_OPTIONS)
+    side = models.CharField('Lado', max_length=6, choices=SIDE_ELEMENT)
+
+    class Meta:
+        verbose_name = 'Recurso'
+        verbose_name_plural = 'Recursos'
+
+    def __str__(self):
+        return self.titulo
