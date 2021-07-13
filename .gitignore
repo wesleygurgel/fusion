@@ -9,3 +9,7 @@ __pycache_
 .idea
 
 template/*
+
+htmlcov/*
+
+venv_fusion/*
